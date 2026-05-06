@@ -10,6 +10,19 @@ Para inspecionar um modelo e ver o resumo do que foi carregado:
 python -m visualizador_3d_poligonos.obj_parser caminho/do/modelo.obj
 ```
 
+Para renderizar o modelo em uma janela interativa com iluminação, modos de exibição e projeção:
+
+```bash
+python -m visualizador_3d_poligonos.renderer caminho/do/modelo.obj
+```
+
+Teclas suportadas:
+
+- `P`: alterna entre projeção isométrica e perspectiva
+- `W`: alterna o modo wireframe
+- `S`: alterna o modo sólido
+- `Esc`: fecha o visualizador
+
 ## O que o parser suporta
 
 - Vértices (`v`), normais (`vn`) e coordenadas UV (`vt`)

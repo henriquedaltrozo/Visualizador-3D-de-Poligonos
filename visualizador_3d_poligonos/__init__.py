@@ -11,6 +11,7 @@ from .obj_parser import (
     TextureCoordinate,
     Vector3,
 )
+from .renderer import Renderer
 
 __all__ = [
     # Etapa 1 — parser
@@ -27,4 +28,6 @@ __all__ = [
     "Triangle",
     "build_mesh",
     "face_normal",
+    # Etapa 3 — visualização
+    "Renderer",
 ]
