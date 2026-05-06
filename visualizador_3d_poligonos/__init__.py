@@ -1,5 +1,6 @@
-"""Parser OBJ/MTL para a ETAPA 1 do visualizador 3D."""
+"""Parser OBJ/MTL (ETAPA 1) e construtor de malha 3D (ETAPA 2) do visualizador 3D."""
 
+from .mesh_builder import Mesh, Triangle, build_mesh, face_normal
 from .obj_parser import (
     Face,
     FaceVertex,
@@ -12,6 +13,7 @@ from .obj_parser import (
 )
 
 __all__ = [
+    # Etapa 1 — parser
     "Face",
     "FaceVertex",
     "Material",
@@ -20,4 +22,9 @@ __all__ = [
     "ObjSummary",
     "TextureCoordinate",
     "Vector3",
+    # Etapa 2 — malha
+    "Mesh",
+    "Triangle",
+    "build_mesh",
+    "face_normal",
 ]
