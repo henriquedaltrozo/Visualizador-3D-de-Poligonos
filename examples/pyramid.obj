@@ -1,0 +1,31 @@
+# Pirâmide quadrangular
+mtllib pyramid.mtl
+
+# Vértices da base
+v -1.0 -1.0 -1.0
+v  1.0 -1.0 -1.0
+v  1.0 -1.0  1.0
+v -1.0 -1.0  1.0
+
+# Vértice do topo
+v  0.0  1.0  0.0
+
+usemtl pyramid_base
+
+# Faces da base (2 triângulos)
+f 1 2 3
+f 1 3 4
+
+usemtl pyramid_side
+
+# Face frontal
+f 1 5 2
+
+# Face direita
+f 2 5 3
+
+# Face traseira
+f 3 5 4
+
+# Face esquerda
+f 4 5 1

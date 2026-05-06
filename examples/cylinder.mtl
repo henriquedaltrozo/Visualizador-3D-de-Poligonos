@@ -1,0 +1,20 @@
+# Material para cilindro - topo
+newmtl cylinder_top
+Ka 0.5 0.5 0.5
+Kd 0.8 0.8 0.2
+Ks 1.0 1.0 1.0
+Ns 32
+
+# Material para cilindro - fundo
+newmtl cylinder_bottom
+Ka 0.5 0.5 0.5
+Kd 0.8 0.8 0.2
+Ks 1.0 1.0 1.0
+Ns 32
+
+# Material para cilindro - lados
+newmtl cylinder_side
+Ka 0.5 0.5 0.5
+Kd 0.9 0.5 0.1
+Ks 1.0 1.0 1.0
+Ns 64
