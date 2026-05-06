@@ -23,7 +23,6 @@ python -m visualizador_3d_poligonos.renderer examples/cone.obj
 | `T + ↑↓←→` | Transladar |
 | `W` | Wireframe |
 | `P` | Alternar projeção |
-| `V` | Validar Euler |
 | `Esc` | Resetar transformações |
 
 ## Estrutura
