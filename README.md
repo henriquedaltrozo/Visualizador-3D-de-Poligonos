@@ -5,21 +5,12 @@ Visualizador 3D interativo em Python com transformações 3D via matrizes 4x4, i
 ## Como Executar
 
 ### Visualizar um arquivo OBJ
-```bash
-python -m visualizador_3d_poligonos.renderer seu_arquivo.obj
-```
 
-### Modelos disponíveis em examples/
 ```bash
 python -m visualizador_3d_poligonos.renderer examples/cube.obj
 python -m visualizador_3d_poligonos.renderer examples/pyramid.obj
 python -m visualizador_3d_poligonos.renderer examples/cylinder.obj
 python -m visualizador_3d_poligonos.renderer examples/cone.obj
-```
-
-### Analisar modelo OBJ
-```bash
-python -m visualizador_3d_poligonos.obj_parser seu_arquivo.obj
 ```
 
 ## Controles
@@ -69,5 +60,3 @@ Status: ✅ **39/39 testes passando**
 
 - Python 3.10+
 - Tkinter (incluído com Python)
-
-Nenhuma dependência externa necessária.
