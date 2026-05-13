@@ -168,7 +168,7 @@ class Renderer:
         canvas.create_text(12, 12, anchor="nw", fill="#000000", text=status, font=("Arial", 12, "bold"))
         
         help_lines = [
-            "P: Persp/Isométrica  W: Wireframe  S: Sólido",
+            "P: Persp/Isométrica  W: Wireframe  Shift+W: Sólido",
             "S: Escala (+/- setas)  R: Rotação (X/Y/Z+setas)  T: Translação (setas)",
             "Mouse: Arrastar para rotacionar  Esc: Reset",
         ]
@@ -184,6 +184,7 @@ class Renderer:
 
     def _on_key(self, event: tk.Event) -> None:
         key = event.keysym.lower()
+        char = getattr(event, "char", "")
         
         # Modos de transformação
         if key == "s" and self.active_transform_mode != "scale":
@@ -260,11 +261,11 @@ class Renderer:
         if key == "p":
             self.projection_mode = "perspective" if self.projection_mode == "isometric" else "isometric"
             self._render_triangles()
+        elif key == "w" and char == "W":
+            self.show_solid = not self.show_solid
+            self._render_triangles()
         elif key == "w":
             self.show_wireframe = not self.show_wireframe
-            self._render_triangles()
-        elif key == "shift+w":
-            self.show_solid = not self.show_solid
             self._render_triangles()
 
     def _handle_projection_wireframe(self, key: str) -> None:

@@ -8,6 +8,12 @@ from visualizador_3d_poligonos.obj_parser import ObjParser, Vector3
 from visualizador_3d_poligonos.renderer import Renderer
 
 
+class _KeyEvent:
+    def __init__(self, keysym: str, char: str = "") -> None:
+        self.keysym = keysym
+        self.char = char
+
+
 class RendererMathTests(unittest.TestCase):
     def test_isometric_projection_has_distinct_coordinates(self) -> None:
         model = ObjParser().parse_text(textwrap.dedent("""
@@ -60,6 +66,20 @@ class RendererMathTests(unittest.TestCase):
         color = renderer._shade_color((255, 128, 0), (Vector3(0.0, 0.0, 0.0), Vector3(1.0, 0.0, 0.0), Vector3(0.0, 1.0, 0.0)))
         self.assertTrue(color.startswith("#"))
         self.assertEqual(len(color), 7)
+
+    def test_shift_w_toggles_solid_mode(self) -> None:
+        model = ObjParser().parse_text(textwrap.dedent("""
+            v 0 0 0
+            v 1 0 0
+            v 0 1 0
+            f 1 2 3
+        """))
+        renderer = Renderer(build_mesh(model), model.materials)
+        self.assertTrue(renderer.show_solid)
+
+        renderer._on_key(_KeyEvent("w", "W"))
+
+        self.assertFalse(renderer.show_solid)
 
 
 if __name__ == "__main__":

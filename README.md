@@ -18,10 +18,11 @@ python -m visualizador_3d_poligonos.renderer examples/cone.obj
 | Tecla | Função |
 |-------|--------|
 | **Mouse** | Arrastar para girar |
-| `R + X/Y/Z` | Rotacionar 5° em um eixo |
-| `S + ↑/↓` | Aumentar/diminuir tamanho |
-| `T + ↑↓←→` | Transladar |
+| `R + X/Y/Z` | Ativar modo de rotação e rotacionar 5° em um eixo |
+| `S + ↑/↓` | Ativar modo de escala e aumentar/diminuir tamanho |
+| `T + ↑↓←→` | Ativar modo de translação e mover o objeto |
 | `W` | Wireframe |
+| `Shift+W` | Sólido |
 | `P` | Alternar projeção |
 | `Esc` | Resetar transformações |
 
